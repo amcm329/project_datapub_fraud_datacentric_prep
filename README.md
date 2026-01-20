@@ -15,7 +15,8 @@ This work was developed as part of a contest for [**The Data Pub**](https://www.
 ```bash
 DataPubDataCentricChallenge_AaronMartinCastilloMedina/
 ├── train/
-│   ├── X_train_datapub.csv
+│   ├── X_train_datapub_part1.csv
+│   ├── X_train_datapub_part2.csv
 │   └── Y_train_datapub.csv
 ├── test/
 │   └── X_test_datapub.csv
@@ -32,7 +33,7 @@ DataPubDataCentricChallenge_AaronMartinCastilloMedina/
 ### `train/`
 Stores the labeled training data used for transformation, analysis, and model training.
 
-- `X_train_datapub.csv`: Training features (input variables).
+- `X_train_datapub_part1.csv`, `X_train_datapub_part2.csv`: Training features (input variables).
 - `Y_train_datapub.csv`: Training labels (target), includes `fraud_flag`.
 
 ### `test/`
