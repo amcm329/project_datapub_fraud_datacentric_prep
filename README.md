@@ -1,6 +1,6 @@
 # Project DataPub Fraud Data Centric Preprocessing
 
-## Purpose
+## Project Purpose
 
 This notebook applies a data-centric approach: instead of treating the dataset as fixed and only tuning models, it focuses on systematically transforming and cleaning the dataset so a supervised classifier can learn from it more reliably.
 
@@ -12,25 +12,51 @@ This work was developed as part of a contest for **The Data Pub** initiative (Me
 
 Reference: [1]
 
-## Project Structure
+---
 
-These are the main files and folders used in the project. They define where the input data lives, where the output prediction file is saved, and where the notebook and dependencies are stored.
+## Repository Structure
 
-- `train/X_train_datapub.csv`  
-  Training features (input variables). Used to build and validate the transformations and later train a model.
+```bash
+DataPubDataCentricChallenge_AaronMartinCastilloMedina/
+├── train/
+│   ├── X_train_datapub.csv
+│   └── Y_train_datapub.csv
+├── test/
+│   └── X_test_datapub.csv
+├── results/
+│   └── DataPubDataCentricChallenge_AaronMartinCastilloMedina.csv
+├── DataPubDataCentricChallenge_AaronMartinCastilloMedina.ipynb
+└── requirements.txt
+```
 
-- `train/Y_train_datapub.csv`  
-  Training labels (target). Contains `fraud_flag` for the rows in `X_train_datapub.csv`.
+---
 
-- `test/X_test_datapub.csv`  
-  Test features (same format as `X_train_datapub.csv` but without labels). Used at the end to generate the final submission file.
+## Folder and File Descriptions
 
-- `results/DataPubDataCentricChallenge_AaronMartinCastilloMedina.csv`  
-  Output predictions file (submission). This is the CSV generated for upload to the contest platform.
+### `train/`
+Stores the labeled training data used for transformation, analysis, and model training.
 
-- `DataPubDataCentricChallenge_AaronMartinCastilloMedina.ipynb`  
-  Main notebook. Contains the full workflow: loading data, transforming features, cleaning, and producing the final CSV.
-  
+- `X_train_datapub.csv`: Training features (input variables).
+- `Y_train_datapub.csv`: Training labels (target), includes `fraud_flag`.
+
+### `test/`
+Stores the unlabeled test data used only to generate the final contest submission.
+
+- `X_test_datapub.csv`: Test features (same schema as `X_train_datapub.csv`, without labels).
+
+### `results/`
+Stores the generated outputs for the challenge.
+
+- `DataPubDataCentricChallenge_AaronMartinCastilloMedina.csv`: Submission file with predictions for the test set.
+
+### `DataPubDataCentricChallenge_AaronMartinCastilloMedina.ipynb`
+Main notebook containing the full workflow: loading data, feature transformation, cleaning, and generation of the submission CSV.
+
+### `requirements.txt`
+Lists the Python dependencies required to run the notebook.
+
+---
+
 ## Goal and Procedure
 
 Goal: build a training-ready table with numeric features that represent what matters for fraud prediction, then remove noise and redundancy.
@@ -45,6 +71,8 @@ Procedure:
   - Drop redundant predictors with absolute correlation = 1 (4 columns).
   - Drop weak predictors with low absolute correlation to `fraud_flag` using threshold 0.01.
 
+---
+
 ## Results
 
 Class balance is heavily imbalanced:
@@ -55,6 +83,8 @@ Class balance is heavily imbalanced:
 Final dataset shown after dropping steps: 92,790 rows × 19 columns.
 
 Example of the strongest simple correlations with the target (still small): `item_computers`, `total_purchase`, `item_fulfilment_charge`.
+
+---
 
 ## Takeaways
 
@@ -69,9 +99,9 @@ Fraud is rare in the data, so later evaluation and training need imbalance-aware
 
 Simple correlations with `fraud_flag` are weak overall, so fraud likely depends on interactions or non-linear patterns, not one single feature.
 
-- `requirements.txt`  
-  Python dependencies needed to run the notebook (libraries and versions).
+---
 
 ## References
 
 [1] https://dcai.csail.mit.edu/2024/data-centric-model-centric/
+
