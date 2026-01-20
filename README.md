@@ -8,8 +8,6 @@ It also borrows the “centering” idea from [customer-centricity](https://dcai
 
 This work was developed as part of a contest for **The Data Pub** initiative (Mexico-based).
 
-`X_test_datapub.csv` is excluded during target-driven analysis because without the target you cannot validate checks like correlation against `fraud_flag`, so its use is not helpful at that stage.
-
 ---
 
 ## Repository Structure
@@ -41,6 +39,8 @@ Stores the labeled training data used for transformation, analysis, and model tr
 Stores the unlabeled test data used only to generate the final contest submission.
 
 - `X_test_datapub.csv`: Test features (same schema as `X_train_datapub.csv`, without labels).
+
+**Note:** `X_test_datapub.csv` is excluded during target-driven analysis because without the target you cannot validate checks like correlation against `fraud_flag`, so its use is not helpful at that stage.
 
 ### `results/`
 Stores the generated outputs for the challenge.
