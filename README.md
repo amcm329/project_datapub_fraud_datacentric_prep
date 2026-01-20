@@ -4,13 +4,11 @@
 
 This notebook applies a data-centric approach: instead of treating the dataset as fixed and only tuning models, it focuses on systematically transforming and cleaning the dataset so a supervised classifier can learn from it more reliably.
 
-It also borrows the “centering” idea from customer-centricity (put the customer at the core of decisions) and applies it to data: decisions are driven by what makes the dataset easiest and safest for ML to consume.
+It also borrows the “centering” idea from \href{https://dcai.csail.mit.edu/2024/data-centric-model-centric/}{customer-centricity} (put the customer at the core of decisions) and applies it to data: decisions are driven by what makes the dataset easiest and safest for ML to consume.
 
 This work was developed as part of a contest for **The Data Pub** initiative (Mexico-based).
 
 `X_test_datapub.csv` is excluded during target-driven analysis because without the target you cannot validate checks like correlation against `fraud_flag`, so its use is not helpful at that stage.
-
-Reference: [1]
 
 ---
 
@@ -98,10 +96,3 @@ Dimensional change shows the impact of data-centric cleaning:
 Fraud is rare in the data, so later evaluation and training need imbalance-aware choices (metrics, class weights, sampling).
 
 Simple correlations with `fraud_flag` are weak overall, so fraud likely depends on interactions or non-linear patterns, not one single feature.
-
----
-
-## References
-
-[1] https://dcai.csail.mit.edu/2024/data-centric-model-centric/
-
