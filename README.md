@@ -4,7 +4,7 @@
 
 This notebook applies a data-centric approach: instead of treating the dataset as fixed and only tuning models, it focuses on systematically transforming and cleaning the dataset so a supervised classifier can learn from it more reliably.
 
-It also borrows the “centering” idea from [https://dcai.csail.mit.edu/2024/data-centric-model-centric/][customer-centricity] (put the customer at the core of decisions) and applies it to data: decisions are driven by what makes the dataset easiest and safest for ML to consume.
+It also borrows the “centering” idea from [customer-centricity](https://dcai.csail.mit.edu/2024/data-centric-model-centric/) (put the customer at the core of decisions) and applies it to data: decisions are driven by what makes the dataset easiest and safest for ML to consume.
 
 This work was developed as part of a contest for **The Data Pub** initiative (Mexico-based).
 
