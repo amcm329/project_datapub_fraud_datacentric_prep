@@ -6,7 +6,7 @@ This notebook applies a data-centric approach: instead of treating the dataset a
 
 It also borrows the “centering” idea from [customer-centricity](https://dcai.csail.mit.edu/2024/data-centric-model-centric/) (put the customer at the core of decisions) and applies it to data: decisions are driven by what makes the dataset easiest and safest for ML to consume.
 
-This work was developed as part of a contest for **The Data Pub** initiative (Mexico-based).
+This work was developed as part of a contest for [**The Data Pub**](https://www.linkedin.com/feed/update/urn:li:activity:7225198701412032512/?originalSubdomain=es) initiative (Mexico-based).
 
 ---
 
