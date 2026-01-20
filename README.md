@@ -56,6 +56,44 @@ Lists the Python dependencies required to run the notebook.
 
 ---
 
+## Environment and Dependencies
+
+Use these versions to reproduce the notebook results:
+
+- Python >= `3.13.9`
+- numpy >= `2.3.5`
+- pandas >= `2.3.3`
+- nltk >= `3.9.2`
+- scikit-learn >= `1.7.2`
+- seaborn >= `0.13.2`
+- matplotlib >= `3.10.6`
+
+### Install 
+
+You can use the file `requirements.txt` and run:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or installing them manually: 
+
+```bash
+pip install numpy==2.3.5 pandas==2.3.3 nltk==3.9.2 scikit-learn==1.7.2 seaborn==0.13.2 matplotlib==3.10.6
+```
+
+---
+
+## How to Run
+
+After installing the dependencies, open and run the notebook:
+
+- `DataPubDataCentricChallenge_AaronMartinCastilloMedina.ipynb`
+
+Run all cells in order to reproduce the transformations and generate the output CSV in `results/`.
+
+---
+
 ## Goal and Procedure
 
 Goal: build a training-ready table with numeric features that represent what matters for fraud prediction, then remove noise and redundancy.
